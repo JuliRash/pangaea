@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use \App\Http\Controller\DemoController;
+use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\PublisherController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/payment', function () {
-    return view('payment');
-});
+Route::post('subscribe/{topic}/', [SubscriberController::class, 'subscribeTopic']);
+Route::post('publish/{topic}/', [PublisherController::class, 'publishTopic']);
