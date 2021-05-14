@@ -1,4 +1,4 @@
-# Pangaea Portal :rocket:
+# Pangaea Notification :alarm_clock:
 
 ## Description:
 This is a simple application that uses laravel notification to send requests to subscribers when a topic is published
@@ -6,7 +6,7 @@ This is a simple application that uses laravel notification to send requests to 
 ![image](pangaea.png)
 
 ### Prerequisites:
-You need to have the following software installed on your computer to get the portal up
+You need to have the following software installed on your computer to get the application up & running.
 
 ```
 php7.3+
@@ -14,7 +14,7 @@ composer
 mysql
 ```
 ### Installation:
-A step by step process of installing the pangae application portal on your local machine manually.
+A step-by-step process of installing the pangaea application portal on your local machine manually.
 
 * `git clone https://github.com/JuliRash/pangaea.git`
 * `cd pangaea`
@@ -24,7 +24,7 @@ A step by step process of installing the pangae application portal on your local
 * `php artisan migrate`
 
 ### Deployment:
-* https://laravel.com/docs/5.7/deployment
+* https://laravel.com/docs/8.x/deployment
 
 ### Running the application after successful installation.
 
@@ -34,12 +34,14 @@ or make it executable by running
 
 ```$ chmod +x start-server.sh```
 
-```./start-server.sh```
+```$ ./start-server.sh```
 
 ### Alternative installation with docker - [Laravel sail](https://laravel.com/docs/8.x/sail)
-Requirements
+**Requirements**
 ```
-12
+ - Docker
+ - Composer
+
 ```
 ```$ ./vendor/bin/sail up```
 
