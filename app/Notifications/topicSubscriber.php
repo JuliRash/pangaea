@@ -4,7 +4,10 @@
 namespace App\Notifications;
 
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Promise\Utils;
 
 class topicSubscriber
 {
@@ -28,7 +31,12 @@ class topicSubscriber
     }
 
     public function send() {
-//        implement logic to send notification here.
-        return Http::post($this->url, ['message' => 'hello']);
+        $client = new Client();
+
+        $subscriber = $client->requestAsync('POST', $this->url, [
+            'body' => $this->data
+        ]);
+
+        Utils::settle($subscriber)->wait();
     }
 }
